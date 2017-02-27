@@ -3,4 +3,5 @@ class Restaurant < ApplicationRecord
   validates :address, presence: true
   validates :seats, numericality: true
   validates :category, presence: true
+  mount_uploader :image, ImageUploader
 end
