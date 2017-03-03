@@ -2,20 +2,28 @@
 
 <p>
     <div id="map"></div>
+
     <script>
       function initMap() {
-        var geocoder = new google.maps.Geocoder();
-        var address = {lat:<%= @restaurant.latitude %>, lng:<%= @restaurant.longitude %>};
+        // var geocoder = new google.maps.Geocoder();
+        var address = {
+          lat:<%= @restaurant.latitude %>,
+          lng:<%= @restaurant.longitude %>};
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 10,
-          center: new google.maps.LatLng(<%= @restaurant.latitude %>, <%= @restaurant.longitude %>)
+          center: address
         });
+        var marker = new google.maps.Marker({
+        position: address,
+        map: map
+      });
         }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEMAP_APIKEY"] %>&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHiT8oybCNC3eCJGa5x5X9GbWnPuhl3Qo&callback=initMap">
     </script>
 </p>
+
 
   <p>Coordinates: <%= @restaurant.latitude %> <%= @restaurant.longitude %></p>
 
