@@ -5,7 +5,6 @@
 
     <script>
       function initMap() {
-        // var geocoder = new google.maps.Geocoder();
         var address = {
           lat:<%= @restaurant.latitude %>,
           lng:<%= @restaurant.longitude %>};
@@ -20,7 +19,7 @@
         }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=<%ENV["GOOGLEMAP_APIKEY"]%>&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHiT8oybCNC3eCJGa5x5X9GbWnPuhl3Qo&callback=initMap">
     </script>
 </p>
 
