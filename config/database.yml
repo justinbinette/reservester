@@ -25,6 +25,8 @@ development:
   <<: *default
   database: reservester_development
 
+  ENV["GOOGLEMAP_APIKEY"] = "AIzaSyBHiT8oybCNC3eCJGa5x5X9GbWnPuhl3Qo"
+
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is

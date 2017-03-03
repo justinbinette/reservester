@@ -20,12 +20,9 @@
         }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHiT8oybCNC3eCJGa5x5X9GbWnPuhl3Qo&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=<%ENV["GOOGLEMAP_APIKEY"]%>&callback=initMap">
     </script>
 </p>
-
-
-  <p>Coordinates: <%= @restaurant.latitude %> <%= @restaurant.longitude %></p>
 
 
 
