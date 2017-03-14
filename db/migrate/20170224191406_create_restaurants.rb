@@ -5,7 +5,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.0]
       t.string :address
       t.integer :seats
       t.string :category
-
+      t.belongs_to :owner, index: true
       t.timestamps
     end
   end
