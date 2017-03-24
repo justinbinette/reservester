@@ -9,7 +9,7 @@
           lat:<%= @restaurant.latitude %>,
           lng:<%= @restaurant.longitude %>};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
+          zoom: 16,
           center: address
         });
         var marker = new google.maps.Marker({
@@ -46,6 +46,5 @@
   <strong>Category:</strong>
   <%= @restaurant.category %>
 </p>
-
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
+<%=link_to 'Edit', edit_restaurant_path(@restaurant)%>
 <%= link_to 'Back', restaurants_path %>
