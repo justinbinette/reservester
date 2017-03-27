@@ -1,4 +1,6 @@
 class Restaurant < ApplicationRecord
+  belongs_to :owner
+  has_many :reservations
   validates :name, presence: true
   validates :address, presence: true
   validates :seats, numericality: true
